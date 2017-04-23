@@ -1,0 +1,9 @@
+with(obj_ex2)
+{
+    al-=(1/my_speed);
+    ss+=3;
+    draw_set_alpha(al)
+    draw_set_color(c_white);
+    d3d_draw_ellipsoid(x-ss,y-ss,z-ss,x+ss,y+ss,z+ss,obj_control.tex_fire_blue,1,1,10);
+    draw_set_alpha(1);
+}

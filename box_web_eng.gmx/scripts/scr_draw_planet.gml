@@ -1,0 +1,9 @@
+///scr_draw_planet();
+d3d_set_lighting(false);
+d3d_transform_set_identity();
+d3d_transform_add_rotation_x(90);
+d3d_transform_add_translation(((chunk_num_x+1)*100)/2,((chunk_num_y+1)*100)/2,-4200);
+d3d_transform_add_scaling(1,1,1);
+d3d_draw_ellipsoid(-10000,-400,-10000,10000,400,10000,tex_world,1,1,70);
+d3d_transform_set_identity();
+d3d_set_lighting(true);

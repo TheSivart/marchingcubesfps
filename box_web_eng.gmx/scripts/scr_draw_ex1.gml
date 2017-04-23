@@ -1,0 +1,42 @@
+with(obj_ex1)
+{
+    al-=(1/my_speed);
+    ss+=3;
+    draw_set_alpha(al)
+    draw_set_color(c_white);
+    d3d_draw_ellipsoid(x-ss,y-ss,z-ss,x+ss,y+ss,z+ss,obj_control.tex_fire,1,1,10);
+    draw_set_alpha(1);
+}
+/*
+with(obj_ex1)
+{
+    al-=(1/my_speed)/2;
+    draw_set_alpha(al)
+    i=0;
+    rotx+=rotxsp;
+    roty+=rotysp;
+    rotz+=rotzsp;
+    repeat(ball_num)
+    {
+        draw_set_color(c_white);
+        d3d_transform_set_identity();
+        d3d_transform_add_rotation_x(rotx);
+        d3d_transform_add_rotation_y(roty);
+        d3d_transform_add_rotation_z(rotz);
+        d3d_transform_add_translation(x,y,z);
+        d3d_draw_ellipsoid(arx[i]-arss[i],ary[i]-arss[i],arz[i]-arss[i],arx[i]+arss[i],ary[i]+arss[i],arz[i]+arss[i],obj_control.tex_fire,1,1,10);
+        d3d_transform_set_identity();
+        arx[i]-=arxsp[i];
+        ary[i]-=arysp[i];
+        arz[i]-=arzsp[i];
+        arss[i]-=arssp[i];
+        i+=1;
+    }
+    //d3d_draw_ellipsoid(x-ss,y-ss,z-ss,x+ss,y+ss,z+ss,-1,1,1,10);
+    draw_set_color(c_white);
+    draw_set_alpha(1);
+    if(al<=0)
+    {
+        instance_destroy();
+    }
+}

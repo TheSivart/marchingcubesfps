@@ -1,0 +1,45 @@
+///scr_draw_bombs();
+with(obj_bomb)
+{
+    switch(type)
+    {
+        case(1):
+            d3d_transform_set_identity();
+            d3d_transform_add_scaling(size,size,size);
+            d3d_transform_add_translation(x,y,z);
+            d3d_draw_ellipsoid(-1.5,-1.5,-1.5,1.5,1.5,1.5,obj_control.tex_fire,1,1,10);
+            d3d_transform_set_identity();
+        break;
+        case(2):
+            draw_set_color(c_blue);
+            d3d_transform_set_identity();
+            d3d_transform_add_scaling(size,size,size);
+            d3d_transform_add_translation(x,y,z);
+            d3d_draw_ellipsoid(-1.5,-1.5,-1.5,1.5,1.5,1.5,-1,1,1,10);
+            d3d_transform_set_identity();
+            draw_set_color(c_white);
+        break;
+    }
+}
+with(obj_bomb_dummy)
+{
+    switch(type)
+    {
+        case(1):
+            d3d_transform_set_identity();
+            d3d_transform_add_scaling(size,size,size);
+            d3d_transform_add_translation(x,y,z);
+            d3d_draw_ellipsoid(-1.5,-1.5,-1.5,1.5,1.5,1.5,obj_control.tex_fire,1,1,10);
+            d3d_transform_set_identity();
+        break;
+        case(2):
+            draw_set_color(c_blue);
+            d3d_transform_set_identity();
+            d3d_transform_add_scaling(size,size,size);
+            d3d_transform_add_translation(x,y,z);
+            d3d_draw_ellipsoid(-1.5,-1.5,-1.5,1.5,1.5,1.5,-1,1,1,10);
+            d3d_transform_set_identity();
+            draw_set_color(c_white);
+        break;
+    }
+}

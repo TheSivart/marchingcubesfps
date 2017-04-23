@@ -1,0 +1,10 @@
+///show_debug_mes(str);
+if(obj_control.debug_message==true)
+{
+    show_debug_message(argument0);
+    return(true);
+}
+else
+{
+    return(false);
+}
